@@ -181,13 +181,14 @@
   }
   /* Cards */
 .card {
-    background-color: var(--card-bg);
+    background-color: white;
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
     transition: var(--transition);
     width: 30%;
     box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
 .card img {
