@@ -215,3 +215,36 @@
     flex-wrap: wrap; /* Wrap cards to the next line if they don't fit */
     padding: 2rem;
 }
+
+/* Features Section */
+.features {
+    padding: 2rem 10%;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.carousel{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-track{
+    display: flex;
+    gap: 2rem;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
