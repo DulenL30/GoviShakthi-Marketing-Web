@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #0D9488;
+    --primary-color: #0d968b;
     --secondary-color: #134E4A;
     --text-color: #1F2937;
     --bg-color: #ffffff;
@@ -248,4 +248,149 @@
     100% {
         transform: translateX(-50%);
     }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FAQ Section */
+.faq {
+  padding: 2rem 10%;
+  text-align: left;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1rem;
+  background-color: var(--card-bg);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.faq-answer {
+  padding: 0 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.faq-answer.active {
+  padding: 1rem;
+  max-height: 200px;
+}
+
+.divider{
+  border: none;
+  height: 2px;
+  background-color: #1F2937;
+  margin: 20px 0;
+}
+
+/*Footer Section*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: white;
+}
+
+.footer-divider {
+  width: 90%;
+  margin: 0 auto 20px;
+  border: none;
+  height: 1px;
+  background-color: black;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-left {
+  text-align: left;
+  max-width: 50%;
+}
+
+.footer-left .logo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 16px;
+  color: black;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right .email {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-bottom {
+  font-size: 14px;
+  margin-top: 40px;
+  font-weight: bold;
 }
