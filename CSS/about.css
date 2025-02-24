@@ -1,134 +1,115 @@
-.about-hero {
-    padding: 5rem 5% 4rem;
-    text-align: center;
-    background-color: var(--card-bg);
-    margin-bottom: 2rem;
-    margin-top: 5rem;
-  }
-  
-  .about-hero h1 {
+
+.team-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  background-color: #fff;
+  padding-top: 6rem;
+}
+
+.team-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  text-align: center;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .team-section h2 {
     font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: fadeInUp 0.8s ease;
-  }
-  
-  .about-hero p {
-    font-size: 1.2rem;
-    color: #4B5563;
-    max-width: 600px;
-    margin: 0 auto;
-    animation: fadeInUp 1s ease;
   }
 
-  .hero-heading{
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: fadeInUp 0.8s ease;
-    color: var(--primary-color);
-  }
-  
-  .team-section {
-    padding: 4rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
   .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .team-member {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    animation: fadeInUp 1s ease;
-  }
-  
-  .team-member:hover {
-    transform: translateY(-5px);
-  }
-  
-  .image-container{
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 1rem;
-    border-radius: 50%;
-    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .member-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    border-bottom: 1px solid;
+
+  .team-section {
+    padding-top: 7rem;
   }
-  
-  .team-member h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
+}
+
+@media (min-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .role {
-    color: var(--primary-color);
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-  }
-  
-  .bio {
-    color: #4B5563;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-  
-  .social-link img {
-    width: 40px;
-    height: 40px;
-    transition: opacity 0.3s ease;
-    position: relative;
-    ;
-  }
-  
-  .social-link:hover img {
-    opacity: 0.8;
-  }
-  
-  .mission-section {
-    padding: 4rem 5%;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .mission-section h1 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    font-size: 3rem;
-  }
-  
-  .mission-section p {
-    color: #4B5563;
-    line-height: 1.8;
-    font-size: 1.2rem;
-  }
-  
-  @media (max-width: 768px) {
-    .about-hero h1 {
-      font-size: 2rem;
-    }
-    
-    .team-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .team-member {
-      margin-bottom: 1rem;
-    }
-  }
+}
+
+.team-member {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  width: 100%;
+  max-width: 350px;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.member-image-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.member-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.member-info {
+  position: relative;
+  padding: 1.25rem;
+}
+
+.member-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.role {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.linkedin-link {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: block;
+}
+
+.linkedin-icon {
+  width: 28px;
+  height: 28px;
+  transition: opacity 0.3s ease;
+}
+
+.linkedin-icon:hover {
+  opacity: 0.8;
+}
