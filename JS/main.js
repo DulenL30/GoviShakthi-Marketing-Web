@@ -37,13 +37,13 @@ const faqData=[
     },
 
     {
-        question: "What Is GoviShakthi?",
-        answer: "GoviShakthi is an AI powered platform that helps farmers to get the right information at the right time to make informed decisions. It provides information on weather, crop management, pest management, market prices, and government schemes."
+        question: "How does GoviShakthi help improve farmers' income?",
+        answer: "We provide tools and insights, such as price forecasting, alternative product recommendations, and access to reliable markets, enabling farmers to make data-driven decisions and maximixe their profits."
     },
 
     {
-        question: "What Is GoviShakthi?",
-        answer: "GoviShakthi is an AI powered platform that helps farmers to get the right information at the right time to make informed decisions. It provides information on weather, crop management, pest management, market prices, and government schemes."
+        question: "What makes GoviShakthi's services unique?",
+        answer: "Our innovative approach combines technology with agricultural expertise to offer taliored solutions. Services like price prediction, market insights, and alternative product recommendations empower farmers with actionable insights.."
     },
 ];
 
