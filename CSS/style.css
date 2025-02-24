@@ -6,49 +6,56 @@
     --card-bg: #F3F4F6;
     --transition: all 0.3s ease;
   }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+
   body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
   }
-  
   /* Navigation */
 
-  .logo{
-    display: flex;
-    width: 400px;
-    height: 90px;
-
+.nav-items img{
+  object-fit: contain;
+  width: 8rem;
+  max-width: 1200px;
   }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+nav{
+  display: flex;
+  justify-content: center;
+  width:100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between ;
+  width: 95%;
+  max-width: 1200px;
+}
+  .about{
+    padding-right: .75rem;
   }
-  
   .nav-links {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    gap: .75rem;
+  }
+  @media(min-width: 768px){
+    .nav-links{
+      gap: 2.5rem;
+    }
   }
   
   .nav-links a {
-    margin-left: 2rem;
+    text-align:center;
+    /*margin-left: 2rem;*/
     text-decoration: none;
     color: var(--text-color);
     transition: var(--transition);
@@ -73,17 +80,32 @@
     margin: 2px 0;
     transition: var(--transition);
   }
-  
+
+  main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .overall-container{
+    width: 95%;
+    max-width: 1200px;
+  }
+
   /* Hero Section */
   .hero {
-    padding: 8rem 5% 4rem;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: 100vh; /* Ensure the hero section takes up at least the full height of the viewport */
+    padding-top: 10rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
+    width: 90%;
+    text-align: center;
+    max-width: 1200px;
+    padding-bottom: 2rem;
+  }
+
+  .hero-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   
   .hero h1 {
@@ -140,7 +162,7 @@
 
   /*target users Section*/
     .target-users{
-        padding: 2rem 10%;
+        padding-bottom: 4rem;
         text-align: center;
     }
 
@@ -154,19 +176,25 @@
         font-size: 1.2rem;
         margin-bottom: 2rem;
         color: var(--text-color);
+
     }
 
     .user-cards {
-        display: flex;
-        gap: 2rem; /* Adjust the gap between cards as needed */
-        justify-content: center; /* Center the cards horizontally */
-        flex-wrap: wrap; /* Wrap cards to the next line if they don't fit */
-        padding: 2rem;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 3rem;
     }
 
-  /*problems Section*/
+    @media(min-width: 768px){
+      .user-cards{
+        flex-direction: row;
+      }
+    }
+
+  /*!*problems Section*!*/
   .problems{
-    padding: 2rem 10%;
+    padding-bottom: 4rem;
     text-align: center;
   }
 
@@ -184,28 +212,30 @@
   /* Cards */
 .card {
     background-color: white;
-    padding: 2rem;
+    /*padding: 2rem;*/
     border-radius: 12px;
     text-align: center;
     transition: var(--transition);
-    width: 30%;
+    width: 100%;
     box-sizing: border-box;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
+@media(min-width: 768px){
+  width: 30%;
+}
+
 .card img {
     width: 100px; /* Adjust the size as needed */
     height: auto;
-    margin-bottom: 1rem;
-    border-radius: 8px; /* Optional: add border radius for rounded corners */
+    border-radius: 8px;
 }
 
 .card p{
     word-break: break-word;
-    text-align: left;
+    text-align: center;
+  padding-top: 1rem;
 }
-
-
   .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -213,16 +243,24 @@
 
   .problem-cards {
     display: flex;
+    flex-direction: column;
     gap: 2rem; /* Adjust the gap between cards as needed */
-    justify-content: center; /* Center the cards horizontally */
-    flex-wrap: wrap; /* Wrap cards to the next line if they don't fit */
-    padding: 2rem;
 }
+  @media(min-width: 768px) {
+    .problem-cards{
+      flex-direction: row;
+    }
+  }
 
 /* Features Section */
 .features {
-    padding: 2rem 10%;
+    padding-bottom: 4rem;
     text-align: center;
+}
+.features img{
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
 }
 
 .features h2 {
@@ -266,7 +304,7 @@
 
 /* FAQ Section */
 .faq {
-  padding: 2rem 10%;
+  /*padding: 2rem 10%;*/
   text-align: left;
 }
 
@@ -277,10 +315,6 @@
   text-align: center;
 }
 
-.faq-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
 
 .faq-item {
   margin-bottom: 1rem;
@@ -317,64 +351,14 @@
   max-height: 200px;
 }
 
-.divider{
-  border: none;
-  height: 2px;
-  background-color: #1F2937;
-  margin: 20px 0;
-}
 
-/*Footer Section*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.footer {
-  width: 100%;
-  text-align: center;
-  padding: 20px 0;
-  background-color: white;
-}
-
-.footer-divider {
-  width: 90%;
-  margin: 0 auto 20px;
-  border: none;
-  height: 1px;
-  background-color: black;
-}
-
-.footer-content {
+/*!*Footer Section*!*/
+.footer{
+  padding-top: 4rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
+  justify-content: center;
+  gap: 1rem;
 }
-
-.footer-left {
-  text-align: left;
-  max-width: 50%;
-}
-
-.footer-left .logo {
-  width: 150px;
-  height: 150px;
-  margin-bottom: 10px;
-}
-
-.footer-left p {
-  font-size: 16px;
-  color: black;
-}
-
-.footer-right {
-  text-align: right;
-}
-
 .footer-right .email {
   font-size: 16px;
   font-weight: bold;
@@ -391,8 +375,42 @@
   height: 40px;
 }
 
-.footer-bottom {
-  font-size: 14px;
-  margin-top: 40px;
-  font-weight: bold;
+.footer-left .logo {
+  height: 4rem;
+  width: 10rem;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
+
+.footer-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  width: 90%;
+}
+@media(min-width: 768px){
+  .footer-content{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer-left{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
