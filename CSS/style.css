@@ -222,7 +222,9 @@ nav{
   }
 
 @media(min-width: 768px){
-  width: 30%;
+  .card{
+    width: 30%;
+  }
 }
 
 .card img {
